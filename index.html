@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es" class="light dark">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PWA con MD - Chistes</title>
+  <meta name="description" content="Ejemplo de PWA con Material Design">
+  <script src="js/registraServiceWorker.js"></script>
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#fffbfe">
+  <link rel="icon" sizes="32x32" href="favicon.ico">
+  <link rel="manifest" href="site.webmanifest">
+  <script src="ungap/custom-elements.js"></script>
+  <script type="module" src="js/configura.js"></script>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/transicion_completa.css">
+  <style>
+    .chiste-box, .ayuda-section {
+      padding: 1em;
+      background: #f0f0f0;
+      border-radius: 8px;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <md-top-app-bar class="center-aligned">
+    <h1>PWA con MD</h1>
+    <button is="md-menu-button" slot="navigation"></button>
+    <button type="button" class="md-standard-icon-button avatar" title="Perfil" slot="action">
+      <span class="material-symbols-outlined">account_circle</span>
+    </button>
+  </md-top-app-bar>
+
+  <main>
+    <form id="chisteForm">
+      <h2>Selecciona un integrante para ver su chiste</h2>
+      <p>
+        <span id="etiquetaIntegrante" class="md-filled-text-field">
+          <md-select-menu name="integrante" required aria-labelledby="etiquetaIntegrante" options="opcionesDeIntegrante"></md-select-menu>
+          <span>Integrante *</span>
+          <small>Obligatorio</small>
+        </span>
+      </p>
+      <p>
+        <button type="submit" class="md-filled-button" style="width: 100%;">Mostrar Chiste</button>
+      </p>
+    </form>
+
+    <div id="chisteBox" class="chiste-box" style="display:none;"></div>
+  </main>
+
+  <md-options-menu id="opcionesDeIntegrante" aria-label="Opciones de integrante">
+    <span data-value="" title="Selecciona integrante"></span>
+    <span data-value="RODOLFO">GRANADOS GARCIA RODOLFO RAMON</span>
+    <span data-value="MELANIE">GRANILLO SABINO MELANIE SARAHI</span>
+    <span data-value="MARIANA">HERRERA RODRIGUEZ MARIANA</span>
+    <span data-value="ANA">RIVERO MEDEL ANA LILIA</span>
+    <span data-value="JAIME">ROBLES CUENCA JAIME</span>
+  </md-options-menu>
+
+  <nav-drw></nav-drw>
+
+  <script>
+    const chistes = {
+      RODOLFO: "¿Por qué el programador fue al médico? Porque tenía un bucle infinito de dolor de cabeza.",
+      MELANIE: "¿Cómo saludan los programadores? ¡Hola Mundo!",
+      MARIANA: "¿Por qué la computadora fue al gimnasio? Para mejorar su 'rendimiento'.",
+      ANA: "¿Cuál es el colmo de un programador? Tener problemas de 'conexión' social.",
+      JAIME: "¿Qué hace un pez en un servidor? Nada, pero consume ancho de banda."
+    };
+
+    document.getElementById('chisteForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const integranteSelect = document.querySelector('md-select-menu[name="integrante"]');
+      const selectedValue = integranteSelect.getAttribute('value');
+      const chisteBox = document.getElementById('chisteBox');
+      const chiste = chistes[selectedValue];
+
+      if (chiste) {
+        chisteBox.style.display = 'block';
+        chisteBox.textContent = chiste;
+      } else {
+        chisteBox.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
