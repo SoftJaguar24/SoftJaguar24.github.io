@@ -28,8 +28,6 @@ const CACHE = "pwamd"
  */
 const ARCHIVOS = [
  "ayuda.html",
- "botones.html",
- "campos.html",
  "favicon.ico",
  "formulario.html",
  "iconos.html",
