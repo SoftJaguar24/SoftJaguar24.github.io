@@ -29,18 +29,6 @@ const CACHE = "pwamd"
 const ARCHIVOS = [
  "ayuda.html",
  "site.webmanifest",
- "img/maskable_icon_x192.png",
- "img/screenshot_horizontal.png",
- "img/screenshot_vertical.png",
- "js/configura.js",
- "js/nav-bar.js",
- "js/nav-drw.js",
- "js/nav-tab-fixed.js",
- "js/nav-tab-scrollable.js",
- "js/registraServiceWorker.js",
- "lib/css/material-symbols-outlined.css",
- "lib/fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints",
- "lib/fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].ttf",
  "/"
 ]
 
