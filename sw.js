@@ -28,12 +28,7 @@ const CACHE = "pwamd"
  */
 const ARCHIVOS = [
  "ayuda.html",
- "iconos.html",
  "site.webmanifest",
- "css/dark.css",
- "css/estilos.css",
- "css/light.css",
- "css/transicion_completa.css",
  "img/maskable_icon_x192.png",
  "img/screenshot_horizontal.png",
  "img/screenshot_vertical.png",
