@@ -1,6 +1,6 @@
 {
- "short_name": "PWA con MD",
- "name": "PWA con Material Design",
+ "short_name": "Compilando Risas - PWA",
+ "name": "Compilando Risas - PWA",
  "id": "/index.html",
  "start_url": "/index.html",
  "display": "standalone",
