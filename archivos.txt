@@ -1,8 +1,6 @@
 "ayuda.html",
 "botones.html",
 "campos.html",
-"favicon.ico",
-"formulario.html",
 "iconos.html",
 "index.html",
 "interruptor.html",
