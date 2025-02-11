@@ -40,7 +40,6 @@ const ARCHIVOS = [
  "css/light.css",
  "css/transicion_completa.css",
  "css/transicion_pestanas.css",
- "img/Escultura_de_coyote.jpeg",
  "img/icono2048.png",
  "img/maskable_icon.png",
  "img/maskable_icon_x128.png",
