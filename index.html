@@ -27,9 +27,6 @@
 <body>
   <md-top-app-bar class="center-aligned">
     <h1>Compilando Risas</h1>
-    <button is="md-menu-button" slot="navigation"></button>
-    <button type="button" class="md-standard-icon-button avatar" title="Perfil" slot="action">
-    </button>
   </md-top-app-bar>
 
   <main>
@@ -59,8 +56,6 @@
     <span data-value="JAIME">ROBLES CUENCA JAIME</span>
   </md-options-menu>
 
-  <nav-drw></nav-drw>
-
   <script>
     const chistes = {
       RODOLFO: "¿Por qué el programador fue al médico? Porque tenía un bucle infinito de dolor de cabeza.",
@@ -85,7 +80,8 @@
       }
     });
   </script>
-
+  
+<nav-bar></nav-bar>
 </body>
 
 </html>
